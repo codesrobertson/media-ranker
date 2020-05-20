@@ -53,7 +53,7 @@ class WorksController < ApplicationController
   end 
 
   def destroy
-    @work = Work.find_by(id: params [:id])
+    @work = Work.find_by(id: params[:id])
 
     if @work == nil
       redirect_to works_path
