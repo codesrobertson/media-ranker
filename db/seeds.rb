@@ -5,7 +5,7 @@ puts "Loading raw work data from #{WORK_FILE}"
 
 work_failures = []
 CSV.foreach(WORK_FILE, :headers => true) do |row|
-  work = work.new
+  work = Work.new
   work.category = row['category']
   work.title = row['title']
   work.creator = row['creator']  
@@ -20,7 +20,7 @@ CSV.foreach(WORK_FILE, :headers => true) do |row|
   end
 end
 
-puts "Added #{work.count} work records"
+puts "Added #{Work.count} work records"
 puts "#{work_failures.length} works failed to save"
 
 puts "done" 
