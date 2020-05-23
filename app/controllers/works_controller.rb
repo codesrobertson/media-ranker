@@ -5,10 +5,11 @@ class WorksController < ApplicationController
   end
 
   def show
-    @work = Work.find_by(id: params[:id])
+    work_id = params[:id]
+    @work = Work.find_by(id: work_id)
 
     if @work == nil
-      redirect_to works_path
+      head :not_found
       return
     end
   end 
@@ -56,7 +57,7 @@ class WorksController < ApplicationController
     @work = Work.find_by(id: params[:id])
 
     if @work == nil
-      redirect_to works_path
+      head :not_found
       return
     else
       @work.destroy

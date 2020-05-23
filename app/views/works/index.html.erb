@@ -13,6 +13,7 @@
   <th>Title</th>
   <th>Creator</th>
   <th>Publication Year</th>
+  <th>Details</th>
   <th>Edit</th>
   </tr>
   <thead>
@@ -23,6 +24,7 @@
           <td><%= work.title %></td>
           <td><%= work.creator %></td>
           <td><%= work.publication_year %></td>
+          <td><%= button_to "Work Details", work_path(work.id), method: :get %> </td>
           <td><%= button_to "Edit Work", edit_work_path(work.id), method: :get %> </td>
         </tr>
     <% end %>
