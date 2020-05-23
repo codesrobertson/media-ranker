@@ -1,0 +1,9 @@
+<h1>Work Details Page</h1>
+
+  <%= link_to "Ranked Media", root_path %>
+  <%= link_to "Edit", edit_work_path(@work.id) %>
+  <%= "Vote for this work" %>
+  <%= link_to "Delete this work", work_path(@work.id), method: :delete, data: { confirm: "Is your intent to delete this work?" %>
+
+  <%= @work.title %>
+  <%= @work.category %>

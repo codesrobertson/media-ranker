@@ -18,7 +18,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new
+    @work = Work.new(work_params)
 
     if @work.save
       redirect_to work_path(@work.id)
