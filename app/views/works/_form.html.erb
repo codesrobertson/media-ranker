@@ -25,5 +25,6 @@
     <%= f.text_field :description %>
   </div>
 
-  <%= f.submit "#{action_name} Work" %>
+  <%= f.submit "#{action_name} Work", method: :edit, data: { confirm: "Is your intent to edit this work?"} %>
+
   <% end %>
