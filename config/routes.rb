@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root 'homepage#index'
   resources :works
+  resources :users, only [:index, :show]
+  
 end
